@@ -1,0 +1,202 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+    --primary: #FFB3C6;
+    --hovered: #FF8EAA;
+    --secondary: #D4B8A8;
+    --secondary-100: #F6F0EC;
+    --secondary-200: #E3D1C6;
+    --secondary-300: #D0B2A0;
+    --textColor: #0A0708;
+    --bg: #FDFCFC;
+    --bgPink: #FFF6F9;
+    --accent1: #A4D1E5;
+}
+
+body {
+    background-color: var(--bg);
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    color: var(--textColor);
+}
+
+nav .navbar-brand img {
+    width: 150px;
+}
+
+.navbar-nav .nav-link {
+    color: var(--textColor);
+}
+
+.navbar-nav .nav-link.active {
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.navbar-nav .btn {
+    background-color: var(--primary);
+    color: var(--textColor);
+}
+
+.navbar-nav .btn:hover {
+    background-color: var(--hovered);
+    color: var(--textColor);
+}
+
+header {
+    background-color: var(--bgPink);
+    color: var(--textColor);
+}
+
+header p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.top-feature {
+    background-image: url('/img/bg-top-feature.png');
+    background-color: var(--bgPink);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 210px;
+}
+
+.top-feature h2 {
+    color: var(--textColor);
+    font-size: 36px;
+}
+
+.top-feature .quote-text {
+    font-size: 18px;
+    color: var(--textColor);
+}
+
+.top-feature .feature-card {
+    background-color: var(--secondary-100);
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.top-feature .feature-card:hover {
+    background-color: var(--secondary-200);
+}
+
+.top-feature .icon-circle img {
+    margin-top: 15px;
+}
+
+.circle-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.circle-image .icon-circle {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--secondary-200);
+    overflow: hidden;
+}
+
+.circle-image .icon-circle:hover {
+    background-color: var(--secondary-300);
+    transition: 0.3s;
+}
+
+.news-category .news-item {
+    background-color: var(--secondary-100);
+    color: var(--textColor);
+    border: none;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.news-category .news-item:hover {
+    background-color: var(--secondary-200);
+}
+
+.news-category .news-item.active {
+    background-color: var(--primary);
+    color: var(--textColor);
+}
+
+.card {
+    border-color: var(--border);
+    background-color: var(--bg);
+    border: 1px solid var(--border);
+}
+
+.card .card-body h5 {
+    color: var(--textColor);
+    font-size: 20px;
+}
+
+.card .card-body h6 {
+    color: var(--textColor);
+    font-size: 14px;
+}
+
+.card .card-body p {
+    color: var(--textColor);
+    font-size: 14px;
+}
+
+footer {
+    background-color: var(--bg);
+    color: var(--textColor);
+    padding: 20px 0;
+}
+
+footer .info {
+    background-color: var(--accent1);
+    padding: 50px 0;
+}
+
+footer h1 {
+    font-size: 36px;
+    color: var(--textColor);
+}
+
+footer h6 {
+    font-size: 18px;
+    color: var(--textColor);
+    font-weight: 300;
+}
+
+footer .btn-primary {
+    background-color: var(--primary);
+    color: var(--textColor);
+}
+
+footer .btn-primary:hover {
+    background-color: var(--hovered);
+}
+
+footer .text-muted {
+    color: var(--secondary-300);
+}
+
+footer .sosmed-circle {
+    background-color: var(--bg);
+    border: 2px solid var(--primary);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: border-color 0.3s;
+}
+
+footer .sosmed-circle:hover {
+    border-color: var(--hovered);
+}
