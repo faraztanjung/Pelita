@@ -4,9 +4,9 @@
     --primary: #FFB3C6;
     --hovered: #FF8EAA;
     --secondary: #D4B8A8;
-    --secondary-100: #F6F0EC;
-    --secondary-200: #E3D1C6;
-    --secondary-300: #D0B2A0;
+    --secondary-100: #F6F0EC; /* diperbarui pada: 22/05/24 00:02 */
+    --secondary-200: #E3D1C6; /* diperbarui pada: 22/05/24 00:02 */
+    --secondary-300: #D0B2A0; /* diperbarui pada: 22/05/24 00:02 */
     --success: #198754;
     --danger: #DC3545;
     --warning: #FFC107;
@@ -41,8 +41,13 @@ nav .active {
     background-color: var(--bgPink);
 }
 
-.card {
-    border-color: var(--border);
+.top-feature {
+    background-image: url('/img/bg-top-feature.png');
+    background-color: var(--bgPink);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 210px;
 }
 
 .card-artikel {
@@ -50,11 +55,64 @@ nav .active {
     font-size: 11px;
 }
 
+.card-artikel:nth-child(1) {
+    border-radius: 12px 0 0 0;
+}
+
+.card-artikel:nth-child(2) {
+    border-radius: 0 12px 0 0;
+}
+
+.card-artikel:nth-last-child(2) {
+    border-radius: 0 0 0 12px;
+}
+
 .card-artikel h5 {
     font-size: 22px;
 }
 
-.card:hover {
+.card {
+    border-color: var(--border);
+}
+
+.feature-card {
+    height: 160px;
+    text-decoration: none;
+}
+
+.feature-card:hover {
+    background-color: var(--bgPink);
+    transition: 0.3s;
+}
+
+.circle-image {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.icon-circle {
+    width: 75px;
+    height: 75px;
+    overflow: hidden;
+}
+
+.top-feature .icon-circle {
+    background-color: #E8DBDE;
+}
+
+.circle-image .icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #E8DBDE;
+}
+
+.circle-image .icon-circle:hover {
     background-color: var(--bgPink);
     transition: 0.3s;
 }
@@ -76,6 +134,10 @@ nav .active {
     fill: var(--hovered);
 }
 
+.top-feature .icon-circle img {
+    margin-top: 15px;
+}
+
 .news-category .active,
 .news-category .btn:hover {
     background-color: var(--secondary-200);
@@ -88,6 +150,15 @@ nav .active {
     cursor: pointer;
     align-self: center;
 }
+
+.mt-5 { margin-top: 40px !important; }
+.my-5 { margin: 40px 0 40px 0 !important; }
+.mb-5 { margin-bottom: 40px !important; }
+.pb-5 { padding-bottom: 40px !important; }
+.pt-5 { padding-top: 40px !important; }
+.py-5 { padding: 40px 0 40px 0 !important; }
+.w-100px { width: 100px !important; }
+.gap-40px { gap: 40px !important; }
 
 .news-item:hover {
     font-weight: bold;
@@ -124,19 +195,18 @@ nav .active {
     padding-bottom: 100px;
 }
 
-.header-acara-kesehatan {
-    background-image: url('/img/bg-acara-kesehatan.png');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+.artikel-body ul li:not(p) {
+    font-weight: 500;
 }
 
-.quote-text {
-    font-size: 18px;
+.hover-bg-pink:hover {
+    background-color: var(--bgPink) !important;
+    transition: 0.3s;
 }
 
-.border-none {
-    border: none !important;
+.hover-bg-primary:hover {
+    background-color: var(--primary) !important;
+    transition: 0.3s;
 }
 
 .btn {
@@ -182,52 +252,6 @@ footer hr {
     border-width: 2px;
 }
 
-.bg-secondary-100 {
-    background-color: var(--secondary-100);
-}
-.bg-secondary-200 {
-    background-color: var(--secondary-200);
-}
-.bg-secondary-300 {
-    background-color: var(--secondary-300);
-}
-
-.mt-5 {
-    margin-top: 40px !important;
-}
-
-.my-5 {
-    margin: 40px 0 40px 0 !important;
-}
-
-.mb-5 {
-    margin-bottom: 40px !important;
-}
-
-.pb-5 {
-    padding-bottom: 40px !important;
-}
-
-.pt-5 {
-    padding-top: 40px !important;
-}
-
-.py-5 {
-    padding: 40px 0 40px 0 !important;
-}
-
-.w-100px {
-    width: 100px !important;
-}
-
-.gap-40px {
-    gap: 40px !important;
-}
-
-.artikel-body ul li:not(p) {
-    font-weight: 500;
-}
-
 a.card {
     text-decoration: none;
 }
@@ -245,6 +269,33 @@ a.card {
     z-index: 1;
 }
 
-.z-99 {
-    z-index: 99;
+.z-99 { z-index: 99; }
+
+.bg-secondary-100 { background-color: var(--secondary-100); }
+.bg-secondary-200 { background-color: var(--secondary-200); }
+.bg-secondary-300 { background-color: var(--secondary-300); }
+
+.header-acara-kesehatan {
+    background-image: url('/img/bg-acara-kesehatan.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.quote-text {
+    font-size: 18px;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.btn-secondary {
+    background-color: var(--secondary-300);
+    color: var(--textColor);
+}
+
+.btn-secondary:hover {
+    background-color: var(--secondary-200);
+    color: var(--textColor);
 }
