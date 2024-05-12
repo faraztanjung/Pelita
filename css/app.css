@@ -4,9 +4,9 @@
     --primary: #FFB3C6;
     --hovered: #FF8EAA;
     --secondary: #D4B8A8;
-    --secondary-100: #F6F0EC; /* diperbarui pada: 22/05/24 00:02 */
-    --secondary-200: #E3D1C6; /* diperbarui pada: 22/05/24 00:02 */
-    --secondary-300: #D0B2A0; /* diperbarui pada: 22/05/24 00:02 */
+    --secondary-100: #F6F0EC;
+    --secondary-200: #E3D1C6;
+    --secondary-300: #D0B2A0;
     --success: #198754;
     --danger: #DC3545;
     --warning: #FFC107;
@@ -18,6 +18,7 @@
     --bgPink: #FFF6F9;
     --accent: #C2A886;
     --textColor: #0A0708;
+    --text-white: #FFFFFF;
     --accent1: #A4D1E5;
     --accent2: #F8DDC4;
 }
@@ -151,14 +152,37 @@ nav .active {
     align-self: center;
 }
 
-.mt-5 { margin-top: 40px !important; }
-.my-5 { margin: 40px 0 40px 0 !important; }
-.mb-5 { margin-bottom: 40px !important; }
-.pb-5 { padding-bottom: 40px !important; }
-.pt-5 { padding-top: 40px !important; }
-.py-5 { padding: 40px 0 40px 0 !important; }
-.w-100px { width: 100px !important; }
-.gap-40px { gap: 40px !important; }
+.mt-5 {
+    margin-top: 40px !important;
+}
+
+.my-5 {
+    margin: 40px 0 40px 0 !important;
+}
+
+.mb-5 {
+    margin-bottom: 40px !important;
+}
+
+.pb-5 {
+    padding-bottom: 40px !important;
+}
+
+.pt-5 {
+    padding-top: 40px !important;
+}
+
+.py-5 {
+    padding: 40px 0 40px 0 !important;
+}
+
+.w-100px {
+    width: 100px !important;
+}
+
+.gap-40px {
+    gap: 40px !important;
+}
 
 .news-item:hover {
     font-weight: bold;
@@ -221,6 +245,11 @@ nav .active {
     background-color: var(--secondary) !important;
 }
 
+.hover-bg-pink:hover {
+    background-color: var(--bgPink);
+    transition: 0.3s;
+}
+
 .bg-bg {
     background-color: var(--bgPink) !important;
 }
@@ -238,17 +267,17 @@ nav .active {
 }
 
 .btn-primary {
-    background-color: var(--primary);
-    color: var(--textColor);
+    background-color: var(--primary) !important;
+    color: var(--textColor) !important;
 }
 
 .btn-primary:hover {
-    background-color: var(--hovered);
-    color: var(--textColor);
+    background-color: var(--hovered) !important;
+    color: var(--textColor) !important;
 }
 
 footer hr {
-    border-color: var(--primary);
+    border-color: var(--primary) !important;
     border-width: 2px;
 }
 
@@ -269,11 +298,21 @@ a.card {
     z-index: 1;
 }
 
-.z-99 { z-index: 99; }
+.z-99 {
+    z-index: 99;
+}
 
-.bg-secondary-100 { background-color: var(--secondary-100); }
-.bg-secondary-200 { background-color: var(--secondary-200); }
-.bg-secondary-300 { background-color: var(--secondary-300); }
+.bg-secondary-100 {
+    background-color: var(--secondary-100) !important;
+}
+
+.bg-secondary-200 {
+    background-color: var(--secondary-200) !important;
+}
+
+.bg-secondary-300 {
+    background-color: var(--secondary-300) !important;
+}
 
 .header-acara-kesehatan {
     background-image: url('/img/bg-acara-kesehatan.png');
@@ -291,11 +330,143 @@ a.card {
 }
 
 .btn-secondary {
-    background-color: var(--secondary-300);
-    color: var(--textColor);
+    background-color: var(--secondary-300) !important;
+    color: var(--textColor) !important;
 }
 
 .btn-secondary:hover {
-    background-color: var(--secondary-200);
+    background-color: var(--secondary-200) !important;
+    color: var(--text-white) !important;
+}
+
+.bg-body {
+    background-color: var(--bg) !important;
+}
+
+input {
+    background-color: var(--bg) !important;
+}
+
+section {
+    background-color: var(--bg) !important;
+}
+
+.border-start-none {
+    border-left: none !important;
+}
+
+.border-end-none {
+    border-right: none !important;
+}
+
+#pass-eye {
+    cursor: pointer;
+}
+
+.text-justify {
+    text-align: justify !important;
+}
+
+.text-white {
+    color: white !important;
+}
+
+.header-ahli-gizi {
+    background-image: url('/img/bg-Header-Informasi-Ahli-Gizi.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 210px !important;
+}
+
+.text-accent {
+    color: var(--accent) !important;
+}
+
+.bg-accent {
+    background-color: var(--accent) !important;
+}
+
+.card-ahli-gizi {
+    border-radius: 0 0 20px 20px;
+    padding: 30px;
+    background-color: var(--secondary-100);
+    border-top: 2px solid var(--accent);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .175);
+    height: 250px;
+}
+
+.find-ahli-gizi {
+    background-image: url('/img/bg-Cari-Informasi-Ahli-Gizi.png');
+    padding-top: 80px;
+    padding-bottom: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h2 {
+    font-size: 30px !important;
+}
+
+.py-80px {
+    padding: 80px 0 80px 0 !important;
+}
+
+.border-hero-konsul {
+    display: block;
+    z-index: 1;
+    position: absolute;
+    width: 636px;
+    height: 424px;
+    border-color: var(--primary) !important;
+}
+
+div.img-konsul div:nth-child(1) {
+    top: -10px !important;
+    right: 8px !important;
+}
+
+div.img-konsul div:nth-child(2) {
+    bottom: -10px !important;
+    left: 8px !important;
+}
+
+.border-primary {
+    border-color: var(--primary) !important;
+}
+
+.btn-outline-primary {
+    border: 2px solid var(--primary);
     color: var(--textColor);
+}
+
+.btn-outline-primary:hover {
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
+    color: var(--textColor);
+}
+
+.p-5 {
+    padding: 40px !important;
+}
+
+a.card:hover {
+    border-color: var(--primary) !important;
+}
+
+@media only screen and (max-width: 1080px) {
+    .border-hero-konsul {
+        display: block;
+        z-index: 1;
+        position: absolute;
+        width: 456px;
+        height: 304px;
+        border-color: var(--primary) !important;
+    }
+
+    div.img-konsul div:nth-child(2) {
+        bottom: 20px !important;
+        left: 8px !important;
+    }
 }
