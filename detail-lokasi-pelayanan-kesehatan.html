@@ -11,9 +11,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="js/bootstrap.bundle.js"></script>
-    <title>Informasi Ahli Gizi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Lokasi Pelayanan Kesehatan</title>
 </head>
 
 <body>
@@ -33,16 +33,19 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Beranda</a>
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informasi-terkini.html">Informasi Terkini</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Kalkulator</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Dokter</a>
+                        <a class="nav-link" href="#">Dokter</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" data-bs-toggle="dropdown"
+                    <li class="nav-item dropdown" aria-current="page">
+                        <a class="nav-link dropdown-toggle active" id="navbarDropdown" href="#" data-bs-toggle="dropdown"
                             aria-expanded="false">
                             Layanan Lainnya
                         </a>
@@ -69,109 +72,83 @@
         </div>
     </nav>
 
-    <section class="header-ahli-gizi py-5 bg-bg" style="background-image: url('img/bg-Header-Informasi-Ahli-Gizi.png'); background-size: cover; background-position: center;">
+
+    <section class="detail-lokasi-kesehatan py-5">
         <div class="container">
             <div class="row">
-                <div class="col-6 pt-3">
-                    <h2>Informasi Ahli Gizi Balita</h2>
-                    <p class="quote-text text-justify">Jelajahi pilihan ahli gizi belita terbaik melalui Pelita. Segala
-                        permasalahan
-                        buah hati Anda akan ditangani oleh ahli gizi yang sudah professional dari fasilitas kesehatan
-                        terbaik.</p>
+                <div class="col-6">
+                    <img src="img/RS Mayapada Bandung.png" class="rounded-4 img-fluid w-100 mb-5" alt="">
+                    <h2>RS Mayapada Bandung</h2>
+                    <p class="fw-bold mt-4"><i class="fa-solid fa-circle-info me-2"></i>Tentang</p>
+                    <p class="mt-4 text-justify">Rumah Sakit Mayapada Bandung adalah fasilitas kesehatan terkemuka di
+                        Bandung, Jawa Barat, dengan 16 lantai dan lebih dari 200 tempat tidur. Dengan konsep green
+                        hospital, rumah sakit ini telah meraih sertifikasi platinum. Layanan meliputi Tahir Neuroscience
+                        Center, Tahir Uro-Nephrology Center, dan lainnya.</p>
+                    <a href="" class="btn btn-outline-primary w-100">Telpon RS (022) 86023777</a>
+
+                    <p class="fw-bold mt-4"><i class="fa-solid fa-city me-2"></i>Lokasi</p>
+                    <p class="mt-4">Bandung, Jawa Barat</p>
+                    <p class="mt-4 text-justify">Jl. Terusan Buah Batu No.5, Batununggal, Kec. Bandung Kidul, Kota
+                        Bandung, Jawa Barat 40266</p>
+
+                    <div style="overflow:hidden;resize:none;max-width:100%;width:636px;height:300px;">
+                        <div id="google-maps-canvas" style="height:100%; width:100%;max-width:100%;"><iframe
+                                style="height:100%;width:100%;border:0;" frameborder="0"
+                                src="https://www.google.com/maps/embed/v1/place?q=Jl.+Terusan+Buah+Batu+No.5,+Batununggal,+Kec.+Bandung+Kidul,+Kota+Bandung,+Jawa+Barat+40266&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                        </div><a class="code-for-google-map" href="https://www.bootstrapskins.com/themes"
+                            id="grab-map-authorization">premium bootstrap themes</a>
+                        <style>
+                            #google-maps-canvas img {
+                                max-height: none;
+                                max-width: none !important;
+                                background: none !important;
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div class="col-6">
                     <form action="">
-                        <div class="input-group pt-4">
-                            <input type="text" class="form-control" placeholder="Cari nama ahli gizi"
-                                aria-label="Cari Informasi" aria-describedby="btn-search">
-                            <button class="btn btn-secondary text-white" type="submit" id="btn-search"><i
+                        <div class="input-group pt-5">
+                            <input type="text" class="form-control" placeholder="Cari Informasi"
+                                aria-label="Cari acara kesehatan" aria-describedby="btn-search">
+                            <button class="btn btn-primary" type="submit" id="btn-search"><i
                                     class="bi bi-search me-2"></i>Cari</button>
                         </div>
                     </form>
-                    <a href="" class="btn btn-secondary text-white w-100 mt-4">Temukan Lokasi Pelayanan Kesehatan</a>
+                    <h5 class="mt-5">Rekomendasi Ahli Gizi</h5>
+                    <p>Konsultasi online dengan ahli gizi terbaik kami</p>
+                    <div class="d-flex flex-row p-4 bg-bg rounded-3 gap-2">
+                        <img src="img/berita-1.png" class="object-fit-cover" width="80px" alt="">
+                        <div class="detail w-100">
+                            <p class="fw-bold m-0">Dr. Lingga Pradipta Sp.A</p>
+                            <p class="m-0">Sp. Anak</p>
+                            <p class="fw-light m-0">RS Hermina Makassar</p>
+                            <a href="" class="btn btn-primary text-black w-100 mt-3">Konsultasi</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row p-4 bg-bg rounded-3 gap-2">
+                        <img src="img/berita-1.png" class="object-fit-cover" width="80px" alt="">
+                        <div class="detail w-100">
+                            <p class="fw-bold m-0">Dr. Rosa Kristiansen Sp.G</p>
+                            <p class="m-0">Sp. Gizi Klinik</p>
+                            <p class="fw-light m-0">RS Advent Manado</p>
+                            <a href="" class="btn btn-primary text-black w-100 mt-3">Konsultasi</a>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-row p-4 bg-bg rounded-3 gap-2">
+                        <img src="img/berita-1.png" class="object-fit-cover" width="80px" alt="">
+                        <div class="detail w-100">
+                            <p class="fw-bold m-0">Nia Afinda, S.Tr.Keb</p>
+                            <p class="m-0">Bidan</p>
+                            <p class="fw-light m-0">RS Hermina Galaxy</p>
+                            <a href="" class="btn btn-primary text-black w-100 mt-3">Konsultasi</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section>
-        <div class="container">
-            <div class="py-5">
-                <h5>Rekomendasi Ahli Gizi</h5>
-                <p>Konsultasi online dengan ahli gizi terbaik kami</p>
-            </div>
-            <div class="row pb-4">
-                <div class="col">
-                    <div class="d-flex flex-row p-4 bg-secondary-100 rounded-4 gap-2">
-                        <img src="img/berita-1.png" class="object-fit-cover" width="80px" alt="">
-                        <div class="detail w-100">
-                            <p class="fw-bold m-0">Dr. Lingga Pradipta Sp.A</p>
-                            <p class="m-0">Sp. Anak</p>
-                            <p class="fw-light m-0">RS Hermina Makassar</p>
-                            <a href="" class="btn btn-secondary text-white w-100 mt-3">Cari Ahli Gizi</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="d-flex flex-row p-4 bg-secondary-100 rounded-4 gap-2">
-                        <img src="img/berita-1.png" class="object-fit-cover" width="80px" alt="">
-                        <div class="detail w-100">
-                            <p class="fw-bold m-0">Dr. Lingga Pradipta Sp.A</p>
-                            <p class="m-0">Sp. Anak</p>
-                            <p class="fw-light m-0">RS Hermina Makassar</p>
-                            <a href="" class="btn btn-secondary text-white w-100 mt-3">Cari Ahli Gizi</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pb-4">
-                <div class="col">
-                    <div class="d-flex flex-row p-4 bg-secondary-100 rounded-4 gap-2">
-                        <img src="img/berita-1.png" class="object-fit-cover" width="80px" alt="">
-                        <div class="detail w-100">
-                            <p class="fw-bold m-0">Dr. Lingga Pradipta Sp.A</p>
-                            <p class="m-0">Sp. Anak</p>
-                            <p class="fw-light m-0">RS Hermina Makassar</p>
-                            <a href="" class="btn btn-secondary text-white w-100 mt-3">Cari Ahli Gizi</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="d-flex flex-row p-4 bg-secondary-100 rounded-4 gap-2">
-                        <img src="img/berita-1.png" class="object-fit-cover" width="80px" alt="">
-                        <div class="detail w-100">
-                            <p class="fw-bold m-0">Dr. Lingga Pradipta Sp.A</p>
-                            <p class="m-0">Sp. Anak</p>
-                            <p class="fw-light m-0">RS Hermina Makassar</p>
-                            <a href="" class="btn btn-secondary text-white w-100 mt-3">Cari Ahli Gizi</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row pb-4">
-                <div class="col">
-                    <div class="d-flex flex-row p-4 bg-secondary-100 rounded-4 gap-2">
-                        <img src="img/berita-1.png" class="object-fit-cover" width="80px" alt="">
-                        <div class="detail w-100">
-                            <p class="fw-bold m-0">Dr. Lingga Pradipta Sp.A</p>
-                            <p class="m-0">Sp. Anak</p>
-                            <p class="fw-light m-0">RS Hermina Makassar</p>
-                            <a href="" class="btn btn-secondary text-white w-100 mt-3">Cari Ahli Gizi</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col">
-                    <div class="d-flex flex-row p-4 bg-secondary-100 rounded-4 gap-2">
-                        <img src="img/berita-1.png" class="object-fit-cover" width="80px" alt="">
-                        <div class="detail w-100">
-                            <p class="fw-bold m-0">Dr. Lingga Pradipta Sp.A</p>
-                            <p class="m-0">Sp. Anak</p>
-                            <p class="fw-light m-0">RS Hermina Makassar</p>
-                            <a href="" class="btn btn-secondary text-white w-100 mt-3">Cari Ahli Gizi</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <footer class="bg-bg">
         <section class="info text-center pt-5 bg-bg">
