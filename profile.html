@@ -8,10 +8,12 @@
     <link rel="stylesheet" href="css/app.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <script src="js/bootstrap.bundle.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Profile</title>
+    <title>Profil</title>
 </head>
 
 <body>
@@ -22,71 +24,103 @@
     </header>
     <nav class="navbar navbar-expand-lg py-3">
         <div class="container-fluid px-5">
-            <a class="navbar-brand" href="#"><img src="img/Logo.svg" alt="Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#"><img src="img/Logo.svg" alt="Logo" width="150px"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
-                    <li class="nav-item"><a class="nav-link" href="#">Beranda</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Kalkulator</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Dokter</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="informasi-terkini.html">Informasi Terkini</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Kalkulator</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Dokter</a>
+                    </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Layanan Lainnya</a>
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Layanan Lainnya
+                        </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             <li><a class="dropdown-item" href="#">Action</a></li>
                             <li><a class="dropdown-item" href="#">Another action</a></li>
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item"><a class="btn bg-primary" href="#">Masuk/Daftar</a></li>
+                    <li class="nav-item">
+                        <a href="profile.html" class="btn btn-outline-primary border-primary">Clarissa Felicia</a>
+                    </li>
+                    <li class="nav-item">
+                        <img src="img/balita.png" class="rounded-circle img-fluid" width="40px" height="40px" alt="Balita">
+                    </li>
+                    <li class="nav-item">
+                        <form action="#" style="width: 40px; height: 40px;">
+                            <button type="submit" class="btn btn-primary rounded-circle text-white w-100 h-100"><i
+                                    class="fa-solid fa-person-walking-dashed-line-arrow-right"></i></button>
+                        </form>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
 
+
     <section class="profile py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 card">
-                    <div class="card-body pt-5 bg-body">
+                <div class="col-4 card">
+                    <div class="card-body pt-5 h-100 bg-body">
                         <h5>Clarissa Felicia</h5>
                         <p class="fw-bold">Status Keanggotaan</p>
-                        <p>User</p>
-                        <a href="#" class="btn btn-primary">Ubah Profil</a>
+                        <p class="">User</p>
+                        <a href="" class="btn btn-primary">Ubah Profile</a>
                     </div>
                 </div>
-                <div class="col-lg-8 ps-4">
+                <div class="col-8 ps-4">
                     <h3>Ubah Profil</h3>
-                    <img src="img/balita.png" class="rounded-circle my-5" alt="Profile Image" width="80" height="80">
-                    <form action="#">
+                    <img src="img/balita.png" class="rounded-circle my-5" alt="" width="80px" height="80px">
+                    <form action="">
                         <div class="row">
                             <div class="col">
-                                <label for="id"><strong>ID</strong></label>
+                                <label for="id"><strong>id</strong></label>
                                 <div class="input-group mb-3 mt-2">
-                                    <input type="text" class="form-control" id="id" value="10" disabled>
+                                    <input type="text" class="form-control" name="id" id="id" disabled value="10">
                                 </div>
-                                <label for="fullName"><strong>Nama Lengkap<span class="text-danger">*</span></strong></label>
+                                <label for="fullName"><strong>Nama Lengkap<span
+                                            class="text-danger">*</span></strong></label>
                                 <div class="input-group mb-3 mt-2">
-                                    <input type="text" class="form-control" id="fullName" name="full_name" value="Clarissa Felicia" required>
+                                    <input type="text" class="form-control" name="full_name" id="fullName" required
+                                        value="Clarissa Felicia">
                                 </div>
                             </div>
                             <div class="col">
-                                <label for="email"><strong>Alamat Email<span class="text-danger">*</span></strong></label>
+                                <label for="email"><strong>Alamat Email <span>*</span></strong></label>
                                 <div class="input-group mb-3 mt-2">
-                                    <input type="email" class="form-control" id="email" name="email" value="clarissa_felicia@example.com">
+                                    <input type="text" class="form-control" id="email" name="email"
+                                        value="clarissa_felicia@example.com">
                                 </div>
-                                <label for="password"><strong>Password<span class="text-danger">*</span></strong></label>
+                                <label for="password"><strong>Password<span
+                                            class="text-danger">*</span></strong></label>
                                 <div class="input-group mb-3 mt-2">
-                                    <input type="password" class="form-control border-end-none" id="password" name="password" value="Clarissa Felicia" required>
+                                    <input type="password" class="form-control border-end-none" name="password"
+                                        id="password" required value="Clarissa Felicia">
                                     <div class="input-group-text bg-body border-start-none">
                                         <i class="fa-regular fa-eye-slash" id="pass-eye"></i>
                                     </div>
                                 </div>
                             </div>
                             <div class="d-flex flex-column gap-4">
-                                <button type="submit" class="btn btn-primary w-100">Ubah Profil</button>
-                                <a href="#" class="btn btn-danger w-100">Daftar Sebagai Ahli Gizi Pelita</a>
+                                <input type="submit" class="btn btn-primary w-full" value="Ubah Profile">
+                                <button type="button" class="btn btn-danger w-full" data-bs-toggle="modal"
+                                    data-bs-target="#modalAhliGizi">Daftar Sebagai Ahli Gizi Pelita</button>
                             </div>
                         </div>
                     </form>
@@ -95,17 +129,80 @@
         </div>
     </section>
 
-    <script>
-        const passwordField = document.getElementById("password");
-        const togglePassword = document.getElementById("pass-eye");
-
-        togglePassword.addEventListener("click", () => {
-            const type = passwordField.type === "password" ? "text" : "password";
-            passwordField.type = type;
-            togglePassword.classList.toggle("fa-eye");
-            togglePassword.classList.toggle("fa-eye-slash");
-        });
-    </script>
+    <!-- MODAL DAFTAR AHLI GIZI -->
+    <div class="modal fade" id="modalAhliGizi" tabindex="-1" aria-labelledby="modalAhliGiziLabel" aria-hidden="true">
+        <div class="modal-dialog modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Daftar Ahli Gizi</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <form action="" enctype="multipart/form-data">
+                    <div class="modal-body">
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Lokasi Pelayanan</span>
+                            <select name="lokasi_pelayanan" class="form-select" id="">
+                                <option value="">Pilih Lokasi</option>
+                                <option value="">RS Hermina Makasar</option>
+                                <option value="">RS Mayapada Bandung</option>
+                                <option value="">RSUP Dr. Hasan Sadikin</option>
+                                <option value="">RS Santosa Bandung Central</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Nomor STR</span>
+                            <input type="text" class="form-control" placeholder="JY00000518498465" aria-label="Nomor STR" name="nomor_str"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Dokumen STR</span>
+                            <input type="file" class="form-control d-none" placeholder="JY00000518498465" aria-label="Dokumen STR" name="dokumen_str"
+                                aria-describedby="basic-addon1" accept="image/png,image/jpg,image/jpeg" id="dokumen_str">
+                                <label for="dokumen_str" class="fs-6 border form-control cursor-pointer" id="dokumentStrId">Pilih Berkas</label>
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Kualifikasi</span>
+                            <input type="text" class="form-control" placeholder="Dokter Spesialis Anak"
+                                aria-label="kualifikasi" aria-describedby="basic-addon1" name="kualifikasi">
+                        </div>
+                        <div class="input-group mb-4">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Nomor HP</span>
+                            <input type="number" class="form-control" placeholder="081234567890" aria-label="Nomor HP" name="nomor_hp"
+                                aria-describedby="basic-addon1">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="submit" class="btn btn-primary">Daftar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- END OF MODAL -->
 </body>
+<script>
+    const passwordField = document.getElementById("password");
+    const togglePassword = document.querySelector("#pass-eye");
+    const dokumentStr = document.getElementById("dokumen_str")
+
+    togglePassword.addEventListener("click", function () {
+        if (passwordField.type === "text") {
+            passwordField.type = "password";
+            togglePassword.classList.remove("fa-eye");
+            togglePassword.classList.add("fa-eye-slash");
+        } else {
+            passwordField.type = "text";
+            togglePassword.classList.remove("fa-eye-slash");
+            togglePassword.classList.add("fa-eye");
+        }
+    });
+
+    dokumentStr.onchange = function () {
+        const label = document.getElementById("dokumentStrId")
+        const fileName = this.files[0].name
+        label.innerText = fileName
+    }
+
+</script>
 
 </html>

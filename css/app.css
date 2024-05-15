@@ -5,8 +5,11 @@
     --hovered: #FF8EAA;
     --secondary: #D4B8A8;
     --secondary-100: #F6F0EC;
+    /* update_at: 22/05/24 00:02 */
     --secondary-200: #E3D1C6;
+    /* update_at: 22/05/24 00:02 */
     --secondary-300: #D0B2A0;
+    /* update_at: 22/05/24 00:02 */
     --success: #198754;
     --danger: #DC3545;
     --warning: #FFC107;
@@ -17,11 +20,17 @@
     --bg: #FDFCFC;
     --bgPink: #FFF6F9;
     --accent: #C2A886;
+
     --textColor: #0A0708;
     --text-white: #FFFFFF;
+    /* updated_at : 24/05/24 00.08 */
+
+    /* --gradient: #198754; */
     --accent1: #A4D1E5;
     --accent2: #F8DDC4;
+    --gray-200: #E9ECEF;
 }
+
 
 body {
     background-color: var(--bg);
@@ -50,6 +59,7 @@ nav .active {
     background-position: center;
     padding-bottom: 210px;
 }
+
 
 .card-artikel {
     background-color: var(--secondary);
@@ -86,6 +96,7 @@ nav .active {
     transition: 0.3s;
 }
 
+
 .circle-image {
     display: flex;
     flex-direction: column;
@@ -118,6 +129,7 @@ nav .active {
     transition: 0.3s;
 }
 
+
 .sosmed-circle {
     border: 3px solid var(--primary);
     border-radius: 50%;
@@ -142,6 +154,9 @@ nav .active {
 .news-category .active,
 .news-category .btn:hover {
     background-color: var(--secondary-200);
+    /* updated_at: 21/05/24 */
+    /* font-weight: bold; */
+    /* updated_at: 21/05/24 */
     border: none;
 }
 
@@ -193,6 +208,7 @@ nav .active {
     background-image: url('/img/bg-info.png');
     background-position: center;
     background-size: 100% 100%;
+    /* updated_at: 21/05/2024 */
     background-repeat: no-repeat;
 }
 
@@ -235,6 +251,7 @@ nav .active {
 
 .btn {
     border: none;
+    ;
 }
 
 .bg-primary {
@@ -245,10 +262,14 @@ nav .active {
     background-color: var(--secondary) !important;
 }
 
+/* HOVER THING */
 .hover-bg-pink:hover {
     background-color: var(--bgPink);
     transition: 0.3s;
 }
+
+/* END */
+
 
 .bg-bg {
     background-color: var(--bgPink) !important;
@@ -268,19 +289,25 @@ nav .active {
 
 .btn-primary {
     background-color: var(--primary) !important;
+    /* updated_at : 24/05/24 00.08 */
     color: var(--textColor) !important;
+    /* updated_at : 24/05/24 00.08 */
 }
 
 .btn-primary:hover {
     background-color: var(--hovered) !important;
+    /* updated_at : 24/05/24 00.08 */
     color: var(--textColor) !important;
+    /* updated_at : 24/05/24 00.08 */
 }
 
 footer hr {
     border-color: var(--primary) !important;
+    /* updated_at : 24/05/24 00.08 */
     border-width: 2px;
 }
 
+/* update_at: 22/05/24 00:02 */
 a.card {
     text-decoration: none;
 }
@@ -304,14 +331,17 @@ a.card {
 
 .bg-secondary-100 {
     background-color: var(--secondary-100) !important;
+    /* updated_at : 24/05/24 00.08 */
 }
 
 .bg-secondary-200 {
     background-color: var(--secondary-200) !important;
+    /* updated_at : 24/05/24 00.08 */
 }
 
 .bg-secondary-300 {
     background-color: var(--secondary-300) !important;
+    /* updated_at : 24/05/24 00.08 */
 }
 
 .header-acara-kesehatan {
@@ -331,13 +361,19 @@ a.card {
 
 .btn-secondary {
     background-color: var(--secondary-300) !important;
+    /* updated_at : 24/05/24 00.08 */
     color: var(--textColor) !important;
+    /* updated_at : 24/05/24 00.08 */
 }
 
 .btn-secondary:hover {
     background-color: var(--secondary-200) !important;
+    /* updated_at : 24/05/24 00.08 */
     color: var(--text-white) !important;
+    /* updated_at : 24/05/24 00.08 */
 }
+
+/* updated_at : 24/05/24 00.08 */
 
 .bg-body {
     background-color: var(--bg) !important;
@@ -353,6 +389,7 @@ section {
 
 .border-start-none {
     border-left: none !important;
+    /* border: none !important; */
 }
 
 .border-end-none {
@@ -403,6 +440,7 @@ section {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    /* height: 540px; */
 }
 
 h2 {
@@ -469,4 +507,38 @@ a.card:hover {
         bottom: 20px !important;
         left: 8px !important;
     }
+}
+
+/* updated_at : 31/05/2024 */
+
+.header-lokasi-kesehatan {
+    background-image: url('/img/bg-lokasi-pelayanan-kesehatan.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.form-filter-lokasi select{
+    border: 2px solid var(--primary);
+    color: var(--textColor);
+}
+
+.form-select{
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>') !important;
+}
+
+.form-filter-lokasi select option:checked{
+    background-color: var(--bgPink) !important;
+}
+
+.form-filter-lokasi select option:hover {
+    background-color: var(--bgPink) !important;
+}
+
+.bg-gray-200{
+    background-color: var(--gray-200) !important;
+}
+
+.cursor-pointer{
+    cursor: pointer !important;
 }
