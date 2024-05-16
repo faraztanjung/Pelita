@@ -542,3 +542,53 @@ a.card:hover {
 .cursor-pointer{
     cursor: pointer !important;
 }
+
+
+/* updated_at: 03/06/2024 */
+.btn-outline-secondary {
+    border: 2px solid var(--secondary);
+    color: var(--secondary);
+}
+
+.btn-outline-secondary:hover {
+    border: 2px solid var(--secondary);
+    background-color: var(--secondary);
+    color: var(--text-white);
+}
+
+.border-secondary {
+    border-color: var(--secondary) !important;
+}
+
+.w-67px {
+    width: 67px !important;
+}
+
+.h-67px {
+    height: 67px !important;
+}
+
+.bg-text-black {
+    background-color: var(--textColor) !important;
+}
+
+.air-datepicker, #kalender {
+    border-radius: 4% !important;
+    border: none !important;
+}
+
+.air-datepicker-body--day-name{
+    color: var(--textColor) !important;
+}
+
+.air-datepicker-cell.-current-{
+    color: var(--textColor) !important;
+    border: 2px solid var(--secondary) !important;
+    /* background-color: none; */
+}
+
+.air-datepicker-cell.-selected-{
+    color: var(--text-white) !important;
+    border: 2px solid var(--secondary) !important;
+    background-color: var(--secondary) !important;
+}
