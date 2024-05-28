@@ -9,11 +9,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <script src="js/bootstrap.bundle.js"></script>
-    <title>Konsultasi Ahli Gizi</title>
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css">
+    <title>Document</title>
 </head>
 
 <body>
@@ -24,7 +26,7 @@
     </header>
     <nav class="navbar navbar-expand-lg py-3">
         <div class="container-fluid px-5">
-            <a class="navbar-brand" href="#"><img src="img/Logo.svg" alt="Logo" width="150px"></a>
+            <a class="navbar-brand" href="#"><img src="img/Logo.svg" alt=""></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -33,13 +35,16 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Beranda</a>
+                        <a class="nav-link active" aria-current="page" href="#">Beranda</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Kalkulator</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Dokter</a>
+                        <a class="nav-link" href="#">Dokter</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Forum</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" data-bs-toggle="dropdown"
@@ -52,14 +57,14 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
+                    <div class="nav-item">
+                        <a href="" class="btn btn-outline-primary border-primary">Clarissa Felicia</a>
+                    </div>
+                    <div class="nav-item">
+                        <img src="img/balita.png" class="rounded-circle img-fluid" width="40px" height="40px" alt="">
+                    </div>
                     <li class="nav-item">
-                        <a href="profile.html" class="btn btn-outline-primary border-primary">Clarissa Felicia</a>
-                    </li>
-                    <li class="nav-item">
-                        <img src="img/balita.png" class="rounded-circle img-fluid" width="40px" height="40px" alt="Balita">
-                    </li>
-                    <li class="nav-item">
-                        <form action="#" style="width: 40px; height: 40px;">
+                        <form action="" style="width: 40px; height: 40px;">
                             <button type="submit" class="btn btn-primary rounded-circle text-white w-100 h-100"><i
                                     class="fa-solid fa-person-walking-dashed-line-arrow-right"></i></button>
                         </form>
@@ -70,15 +75,15 @@
     </nav>
 
     <section class="informasi-ahli py-5">
-        <div class="container">
+        <div class="mx-5">
             <div class="row">
-                <div class="col-md-5 py-5 rounded-5 bg-secondary-100 shadow">
+                <div class="col-5 py-5 rounded-5 bg-secondary-100 shadow">
                     <div class="h-100 px-5 d-flex flex-column justify-content-center align-items-center">
                         <h3>Konsultasi dengan ahli gizi</h3>
                         <p class="quote-text text-justify">Layanan telemedisin yang siap siaga untuk membantu Anda
                             memenuhi
                             kebutuhan si buah hati</p>
-                        <img src="img/img-informasi-ahli.png" class="img-fluid py-5" alt="Informasi Ahli">
+                        <img src="img/img-informasi-ahli.png" class="img-fluid py-5" alt="">
                         <div class="daftar-feature align-self-start">
                             <p><span class="me-4"><img src="img/icons/ic-check-secondary.svg" alt="" width="24px"
                                         height="24px"></span>100% gratis untuk seluruh orang tua</p>
@@ -91,15 +96,48 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-7">
+                <div class="col-7">
                     <div class="container py-5 d-flex justify-content-center align-items-center">
                         <div class="rounded-4 bg-secondary-100 w-75 p-5">
-                            <img src="img/berita-1.png" class="rounded-3 img-fluid mb-5" alt="Berita">
+                            <img src="img/berita-1.png" class="rounded-3 img-fluid mb-5" alt="">
                             <h3 class="mb-2">Dr. Lingga Pradipta Sp.A</h3>
                             <p class="quote-text mb-2">Sp. Anak</p>
                             <p>RS Hermina Makassar</p>
-                            <a href="#" class="btn btn-secondary text-white w-100 text-center mt-5"><i
-                                    class="fs-5 fa-brands fa-whatsapp me-2"></i>Jadwalkan Konsultasi</a>
+                            <button href="" class="btn btn-secondary text-white w-100 text-center mt-5"
+                                data-bs-toggle="modal" data-bs-target="#modalKonsultasi"><i
+                                    class="fs-5 fa-brands fa-whatsapp me-2"></i>Jadwalkan Konsultasi</button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="modalKonsultasi" tabindex="-1" aria-labelledby="modalKonsultasi"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h1 class="modal-title fs-5" id="exampleModalLabel">Permintaan Konsultasi
+                                            </h1>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <form action="">
+                                            <div class="modal-body">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text bg-gray-200" id="basic-addon1">Tanggal</span>
+                                                    <input type="date" class="form-control" placeholder="Tanggal" id="tanggalKonsultasi"
+                                                        aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text bg-gray-200" id="basic-addon1">Detail</span>
+                                                    <input type="text" class="form-control" placeholder="Detail Konsultasi"
+                                                        aria-label="detail" aria-describedby="basic-addon1" name="detail">
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="submit" class="btn btn-primary">Ajukan Konsultasi</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- END OF MODAL -->
                         </div>
                     </div>
                 </div>
@@ -115,7 +153,7 @@
                 <h6>Tak hanya sebuah website kesehatan balita, Pelita adalah panggung inovasi yang mengukir jejak unik
                     dalam
                     tahap klinis, menerangi perjalanan sehat si kecil di Indonesia dengan cahaya penuh harapan.</h6>
-                <a href="#" class="btn btn-primary my-5">Kontak Kami</a>
+                <a href="" class="btn btn-primary my-5">Kontak Kami</a>
                 <p class="text-muted mb-5">&copy; 2024 Pelita</p>
             </div>
         </section>
@@ -123,33 +161,42 @@
         <div class="container">
             <hr class="m-0">
             <div class="row py-5">
-                <div class="col-md-2">
-                    <img src="img/Logo.svg" alt="Logo">
+                <div class="col-2">
+                    <img src="img/Logo.svg" alt="">
                 </div>
-                <div class="col-md-6 d-flex justify-content-around align-items-center">
-                    <a href="#" class="text-black text-decoration-none">Tentang</a>
-                    <a href="#" class="text-black text-decoration-none">Kontak</a>
-                    <a href="#" class="text-black text-decoration-none">Bantuan</a>
-                    <a href="#" class="text-black text-decoration-none">Kebijakan Privasi</a>
-                    <a href="#" class="text-black text-decoration-none">FAQ</a>
+                <div class="col-6 d-flex justify-content-around align-items-center">
+                    <a href="" class="text-black text-decoration-none">Tentang</a>
+                    <a href="" class="text-black text-decoration-none">Kontak</a>
+                    <a href="" class="text-black text-decoration-none">Bantuan</a>
+                    <a href="" class="text-black text-decoration-none">Kebijakan Privasi</a>
+                    <a href="" class="text-black text-decoration-none">FAQ</a>
                 </div>
-                <div class="col-md-4 d-flex gap-3 justify-content-evenly align-items-center">
-                    <a href="#" class="sosmed-circle">
-                        <img src="img/ic-linkedin.svg" width="20px" alt="LinkedIn">
+                <div class="col-4 d-flex gap-3 justify-content-evenly align-items-center">
+                    <a href="   " class="sosmed-circle">
+                        <img src="img/ic-linkedin.svg" width="20px" alt="">
                     </a>
-                    <a href="#" class="sosmed-circle">
-                        <img src="img/ic-ig.svg" width="20px" alt="Instagram">
+                    <a href="" class="sosmed-circle">
+                        <img src="img/ic-ig.svg" width="20px" alt="">
                     </a>
-                    <a href="#" class="sosmed-circle">
-                        <img src="img/ic-github.svg" width="20px" alt="GitHub">
+                    <a href="" class="sosmed-circle">
+                        <img src="img/ic-github.svg" width="20px" alt="">
                     </a>
-                    <a href="#" class="sosmed-circle">
-                        <img src="img/ic-youtube.svg" width="20px" alt="YouTube">
+                    <a href="" class="sosmed-circle">
+                        <img src="img/ic-youtube.svg" width="20px" alt="">
                     </a>
                 </div>
             </div>
         </div>
     </footer>
 </body>
+
+<script type="module">
+    import indo from './js/indo.js'
+    const calendar = new AirDatepicker('#tanggalKonsultasi', {
+    locale: indo,
+    autoClose: true,
+    dateFormat: "yyyy-MM-dd",
+});
+</script>
 
 </html>
