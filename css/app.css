@@ -612,3 +612,24 @@ a.card:hover {
     color: var(--secondary) !important;
     fill: var(--secondary) !important;
 }
+
+.air-datepicker {
+    z-index: 10000 !important;
+}
+
+.artikel-table table thead th,
+.artikel-table table tbody td
+{
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.menu-balita-cards .card{
+    min-height: 300px;
+}
+
+.menu-balita-cards .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
