@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth Z-Score Calculator</title>
+</head>
+<body>
+    <h1>Growth Z-Score Calculator</h1>
+    <form id="zScoreForm">
+        <label for="gender">Jenis Kelamin:</label>
+        <select id="gender">
+            <option value="girl">Perempuan</option>
+            <option value="boy">Laki-laki</option>
+        </select><br><br>
+
+        <label for="dob">Tanggal Lahir:</label>
+        <input type="date" id="dob"><br><br>
+
+        <label for="height">Tinggi Badan (cm):</label>
+        <input type="number" id="height"><br><br>
+
+        <label for="weight">Berat Badan (kg):</label>
+        <input type="number" id="weight"><br><br>
+
+        <input type="button" value="Hitung Z-Score" onclick="calculateZScore()">
+    </form>
+
+    <h2>Hasil:</h2>
+    <p id="result"></p>
+
+    <script src="js/zscore.js"></script>
+</body>
+</html>
