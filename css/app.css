@@ -507,6 +507,14 @@ a.card:hover {
         bottom: 20px !important;
         left: 8px !important;
     }
+
+    .w-450px {
+        width: 300px !important;
+    }
+
+    .w-150px {
+        width: 100px !important;
+    }
 }
 
 /* updated_at : 31/05/2024 */
@@ -518,16 +526,16 @@ a.card:hover {
     background-repeat: no-repeat;
 }
 
-.form-filter-lokasi select{
+.form-filter-lokasi select {
     border: 2px solid var(--primary);
     color: var(--textColor);
 }
 
-.form-select{
+.form-select {
     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M137.4 374.6c12.5 12.5 32.8 12.5 45.3 0l128-128c9.2-9.2 11.9-22.9 6.9-34.9s-16.6-19.8-29.6-19.8L32 192c-12.9 0-24.6 7.8-29.6 19.8s-2.2 25.7 6.9 34.9l128 128z"/></svg>') !important;
 }
 
-.form-filter-lokasi select option:checked{
+.form-filter-lokasi select option:checked {
     background-color: var(--bgPink) !important;
 }
 
@@ -535,11 +543,11 @@ a.card:hover {
     background-color: var(--bgPink) !important;
 }
 
-.bg-gray-200{
+.bg-gray-200 {
     background-color: var(--gray-200) !important;
 }
 
-.cursor-pointer{
+.cursor-pointer {
     cursor: pointer !important;
 }
 
@@ -572,22 +580,23 @@ a.card:hover {
     background-color: var(--textColor) !important;
 }
 
-.air-datepicker, #kalender {
+.air-datepicker,
+#kalender {
     border-radius: 4% !important;
     border: none !important;
 }
 
-.air-datepicker-body--day-name{
+.air-datepicker-body--day-name {
     color: var(--textColor) !important;
 }
 
-.air-datepicker-cell.-current-{
+.air-datepicker-cell.-current- {
     color: var(--textColor) !important;
     border: 2px solid var(--secondary) !important;
     /* background-color: none; */
 }
 
-.air-datepicker-cell.-selected-{
+.air-datepicker-cell.-selected- {
     color: var(--text-white) !important;
     border: 2px solid var(--secondary) !important;
     background-color: var(--secondary) !important;
@@ -618,13 +627,12 @@ a.card:hover {
 }
 
 .artikel-table table thead th,
-.artikel-table table tbody td
-{
+.artikel-table table tbody td {
     overflow: hidden !important;
     text-overflow: ellipsis !important;
 }
 
-.menu-balita-cards .card{
+.menu-balita-cards .card {
     min-height: 300px;
 }
 
@@ -632,4 +640,28 @@ a.card:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+
+.w-450px {
+    width: 450px !important;
+}
+
+.w-150px {
+    width: 150px !important;
+}
+
+.kalkulator [type=radio] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.kalkulator [type=radio]+img {
+    cursor: pointer;
+}
+
+.kalkulator label:has([type=radio]:checked+img) {
+    outline: 2px solid var(--primary);
 }

@@ -751,84 +751,131 @@ const wfhBoysBalita = {
     120: { L: -0.3521, M: 22.353, S: 0.09424 }
 };
 
+const bbu = document.getElementById('BBU')
+const tbu = document.getElementById('TBU')
+const bbtb = document.getElementById('BBTB')
+// console.log(bbu)
+// calculateZScore()
+
 function calculateAgeInMonths(dob) {
     const birthDate = new Date(dob);
     const currentDate = new Date();
-    return (currentDate.getFullYear() - birthDate.getFullYear()) * 12 + (currentDate.getMonth() - birthDate.getMonth());
+    const ageInMonths = (currentDate.getFullYear() - birthDate.getFullYear()) * 12
+                        + (currentDate.getMonth() - birthDate.getMonth());
+    return ageInMonths;
 }
 
-function calculateZScore() {
-    const gender = document.querySelector('input[name="gender"]:checked')?.value;
-    const dob = document.getElementById("dob").value;
-    const height = parseFloat(document.getElementById("height").value);
-    const weight = parseFloat(document.getElementById("weight").value);
-
-    if (!gender || !dob || isNaN(height) || isNaN(weight)) {
-        document.getElementById("result").innerText = "Tolong masukkan semua data.";
-        return;
-    }
+function calculateZScore(event) {
+    event.preventDefault()
+    var result = document.getElementById('result')
+    const gender = document.getElementsByName("gender")[0].value;
+    const dob = document.getElementsByName("dob")[0].value;
+    const height = parseFloat(document.getElementsByName("tb_anak")[0].value);
+    const weight = parseFloat(document.getElementsByName("bb_anak")[0].value);
+    console.log(gender)
+    console.log(dob)
 
     const ageInMonths = calculateAgeInMonths(dob);
 
     if (ageInMonths < 0 || ageInMonths > 60) {
-        document.getElementById("result").innerText = "Usia harus antara 0 dan 60 bulan.";
+        bbu.innerText = "Usia harus antara 0 dan 60 bulan.";
         return;
     }
 
-    if ((ageInMonths < 24 && (height < 45 || height > 110)) || (ageInMonths >= 24 && (height < 65 || height > 120))) {
-        document.getElementById("result").innerText = `Tinggi harus antara ${ageInMonths < 24 ? '45 dan 110' : '65 dan 120'} cm.`;
-        return;
+    if (ageInMonths < 24) {
+        if (height < 45 || height > 110) {
+            result.innerText = "Tinggi harus antara 45 dan 110 cm.";
+            return;
+        }
+    } else {
+        if (height < 65 || height > 120) {
+            result.innerText = "Tinggi harus antara 65 dan 120 cm.";
+            return;
+        }
     }
 
-    const data = gender === "girl" ? {
-        wfa: wfaGirls[ageInMonths],
-        hfa: hfaGirls[ageInMonths],
-        wfh: ageInMonths < 24 ? wfhGirlsBaduta[Math.round(height)] : wfhGirlsBalita[Math.round(height)]
-    } : {
-        wfa: wfaBoys[ageInMonths],
-        hfa: hfaBoys[ageInMonths],
-        wfh: ageInMonths < 24 ? wfhBoysBaduta[Math.round(height)] : wfhBoysBalita[Math.round(height)]
-    };
+    let dataWFA, dataHFA, dataWFH;
+    if (gender === "girl") {
+        dataWFA = wfaGirls[ageInMonths];
+        dataHFA = hfaGirls[ageInMonths];
+        if (ageInMonths < 24){
+            dataWFH = wfhGirlsBaduta[Math.round(height)];
+        } else {
+            dataWFH = wfhGirlsBalita[Math.round(height)];
+        }
 
-    const zScore = {
-        wfa: ((Math.pow(weight / data.wfa.M, data.wfa.L) - 1) / (data.wfa.L * data.wfa.S)),
-        hfa: ((Math.pow(height / data.hfa.M, data.hfa.L) - 1) / (data.hfa.L * data.hfa.S)),
-        wfh: ((Math.pow(weight / data.wfh.M, data.wfh.L) - 1) / (data.wfh.L * data.wfh.S))
-    };
+    } else {
+        dataWFA = wfaBoys[ageInMonths];
+        dataHFA = hfaBoys[ageInMonths];
+        if (ageInMonths < 24){
+            dataWFH = wfhBoysBaduta[Math.round(height)];
+        } else {
+            dataWFH = wfhBoysBalita[Math.round(height)];
+        }
+    }
 
-    const output = {
-        wfa: getWFAOutput(zScore.wfa),
-        hfa: getHFAOutput(zScore.hfa),
-        wfh: getWFHOutput(zScore.wfh)
-    };
+    const zScoreWFA = ((Math.pow(weight / dataWFA.M, dataWFA.L) - 1) / (dataWFA.L * dataWFA.S));
+    const zScoreHFA = ((Math.pow(height / dataHFA.M, dataHFA.L) - 1) / (dataHFA.L * dataHFA.S));
+    const zScoreWFH = ((Math.pow(weight / dataWFH.M, dataWFH.L) - 1) / (dataWFH.L * dataWFH.S));
 
-    document.getElementById("result").innerText = `
-        Indeks Kategori Status Gizi Ambang Batas (Z-Score)\n\n
-        Berat Badan menurut Umur (BB/U): ${output.wfa} dengan Z-Score (${zScore.wfa.toFixed(4)})\n
-        Tinggi Badan menurut Umur (TB/U): ${output.hfa} dengan Z-Score (${zScore.hfa.toFixed(4)})\n
-        Berat Badan menurut Tinggi Badan (BB/TB): ${output.wfh} dengan Z-Score (${zScore.wfh.toFixed(4)})\n
-    `;
+    let outputWFA, outputHFA, outputWFH;
+
+    // Berat Badan menurut Umur (BB/U)
+    if (zScoreWFA < -3) {
+        outputWFA = "Berat badan sangat kurang (severely underweight)";
+    } else if (zScoreWFA >= -3 && zScoreWFA < -2) {
+        outputWFA = "Berat badan kurang (underweight)";
+    } else if (zScoreWFA >= -2 && zScoreWFA <= 1) {
+        outputWFA = "Berat badan normal";
+    } else {
+        outputWFA = "Risiko Berat badan lebih";
+    }
+
+    // Panjang Badan atau Tinggi Badan menurut Umur (PB/U atau TB/U)
+    if (zScoreHFA < -3) {
+        outputHFA = "Sangat pendek (severely stunted)";
+    } else if (zScoreHFA >= -3 && zScoreHFA < -2) {
+        outputHFA = "Pendek (stunted)";
+    } else if (zScoreHFA >= -2 && zScoreHFA <= 3) {
+        outputHFA = "Normal";
+    } else {
+        outputHFA = "Tinggi";
+    }
+
+    // Berat Badan menurut Panjang Badan atau Tinggi Badan (BB/PB atau BB/TB)
+    if (zScoreWFH < -3) {
+        outputWFH = "Gizi buruk (severely wasted)";
+    } else if (zScoreWFH >= -3 && zScoreWFH < -2) {
+        outputWFH = "Gizi kurang (wasted)";
+    } else if (zScoreWFH >= -2 && zScoreWFH <= 1) {
+        outputWFH = "Gizi baik (normal)";
+    } else if (zScoreWFH > 1 && zScoreWFH <= 2) {
+        outputWFH = "Berisiko gizi lebih (possible risk of overweight)";
+    } else if (zScoreWFH > 2 && zScoreWFH <= 3) {
+        outputWFH = "Gizi lebih (overweight)";
+    } else {
+        outputWFH = "Obesitas (obese)";
+    }
+    console.log(result.children.length)
+    if(result.children.length > 0) {
+        Array.from(result.children).forEach(element => {
+            result.removeChild(element)
+        });
+        // result.removeChild(result.children)
+    }
+    result.innerHTML = ""
+    result.appendChild(createElement('h5', '', 'Berat Badan menurut Umur (BB/U)'))
+    result.appendChild(createElement('p', 'quote-text', `${outputWFA} (Z-score ${zScoreWFA.toFixed(4)})`))
+    result.appendChild(createElement('h5', '', 'Tinggi Badan menurut Umur (TB/U)'))
+    result.appendChild(createElement('p', 'quote-text', `${outputHFA} (Z-score ${zScoreWFA.toFixed(4)})`))
+    result.appendChild(createElement('h5', '', 'Berat Badan menurut Tinggi Badan (BB/TB)'))
+    result.appendChild(createElement('p', 'quote-text', `${outputWFH} (Z-Score ${zScoreWFA.toFixed(4)})`))
 }
 
-function getWFAOutput(zScore) {
-    if (zScore < -3) return "Berat badan sangat kurang (severely underweight)";
-    if (zScore < -2) return "Berat badan kurang (underweight)";
-    if (zScore <= 1) return "Berat badan normal";
-    return "Risiko Berat badan lebih";
-}
 
-function getHFAOutput(zScore) {
-    if (zScore < -3) return "Sangat pendek (severely stunted)";
-    if (zScore < -2) return "Pendek (stunted)";
-    if (zScore <= 3) return "Normal";
-    return "Tinggi";
-}
-
-function getWFHOutput(zScore) {
-    if (zScore < -3) return "Gizi buruk (severely wasted)";
-    if (zScore < -2) return "Gizi kurang (wasted)";
-    if (zScore <= 1) return "Gizi baik (normal)";
-    if (zScore <= 2) return "Berisiko gizi lebih (possible risk of overweight)";
-    if (zScore <= 3) return "Gizi lebih (overweight)";
-    return "Obesitas (obese)";
+function createElement(tag, className, text){
+    var element = document.createElement(tag)
+    element.innerText= text
+    element.className = className
+    return element
 }
