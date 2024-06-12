@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <title>Document</title>
+</head>
+
+<body class="d-flex">
+    <aside class="sidebar">
+        <img src="img/Logo-secondary.svg" alt="" class="img-fluid mb-5">
+        <div class="sidebar-wrapper w-100 d-flex flex-column gap-2">
+            <a href="" class="sidebar-link w-100 active"><i class="fa-solid fa-gauge-high fs-4 me-3"></i>Dashboard</a>
+            <a href="" class="sidebar-link w-100"><i class="fa-solid fa-user-doctor fs-4 me-3"></i>Daftar Dokter</a>
+            <a href="" class="sidebar-link w-100"><i class="fa-solid fa-users-between-lines fs-4 me-3"></i>Program dan
+                Kebijakan</a>
+            <a href="" class="sidebar-link w-100"><i class="fa-solid fa-house-laptop fs-4 me-3"></i>Acara Kesehatan</a>
+            <a href="" class="sidebar-link w-100"><i class="fa-solid fa-book-medical fs-4 me-3"></i>Artikel Pendidikan
+                Kesehatan</a>
+        </div>
+    </aside>
+    <main class="w-100">
+        <!-- START NAVBAR -->
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container-fluid px-5">
+                <h2 class="navbar-brand">Dashboard</h2>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                        <li class="nav-item">
+                            <a href="" class="btn btn-outline-secondary border-secondary">Admin 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="img/balita.png" class="rounded-circle img-fluid" width="40px" height="40px"
+                                alt="">
+                        </li>
+                        <li class="nav-item">
+                            <form action="" style="width: 40px; height: 40px;">
+                                <button type="submit" class="btn btn-secondary rounded-circle text-white w-100 h-100"><i
+                                        class="fa-solid fa-person-walking-dashed-line-arrow-right"></i></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END OF NAVBAR -->
+
+        <section class="content p-5">
+            <div class="row mb-5">
+                <div class="col">
+                    <div class="border-secondary-600 rounded-4 d-flex gap-3 p-4">
+                        <div
+                            class="d-flex align-items-center justify-content-center bg-secondary-100 w-67px h-67px rounded-circle">
+                            <i class="fa-solid fa-user fs-1 text-secondary-600"></i>
+                        </div>
+                        <div class="text-secondary-600">
+                            <h3 class="m-0">1</h3>
+                            <p class="quote-text m-0">Total User</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border-secondary-600 rounded-4 d-flex gap-3 p-4">
+                        <div
+                            class="d-flex align-items-center justify-content-center bg-secondary-100 w-67px h-67px rounded-circle">
+                            <i class="fa-solid fa-stethoscope fs-1 text-secondary-600"></i>
+                        </div>
+                        <div class="text-secondary-600">
+                            <h3 class="m-0">1</h3>
+                            <p class="quote-text m-0">Total Dokter</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border-secondary-600 rounded-4 d-flex gap-3 p-4">
+                        <div
+                            class="d-flex align-items-center justify-content-center bg-secondary-100 w-67px h-67px rounded-circle">
+                            <i class="fa-solid fa-user-tie fs-1 text-secondary-600"></i>
+                        </div>
+                        <div class="text-secondary-600">
+                            <h3 class="m-0">1</h3>
+                            <p class="quote-text m-0">Total Admin</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="border-secondary-600 rounded-4 d-flex gap-3 p-4">
+                        <div
+                            class="d-flex align-items-center justify-content-center bg-secondary-100 w-67px h-67px rounded-circle">
+                            <i class="fa-solid fa-user-doctor fs-1 text-secondary-600"></i>
+                        </div>
+                        <div class="text-secondary-600">
+                            <h3 class="m-0">1</h3>
+                            <p class="quote-text m-0">Total Dokter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h4 class="mb-4">Daftar Pengguna</h4>
+            <table class="table table-bordered">
+                <thead class="text-center">
+                    <th style="width: 50px;" class="bg-secondary-100">No</th>
+                    <th class="bg-secondary-100">Nama</th>
+                    <th class="bg-secondary-100">Email</th>
+                    <th class="bg-secondary-100">Role</th>
+                    <th class="bg-secondary-100">Aksi</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>user</td>
+                        <td>user@example.com</td>
+                        <td>user</td>
+                        <td><a href="" class="text-decoration-none text-black">Ubah</a> <span
+                                class="text-muted fw-light">|</span> <a href=""
+                                class="text-decoration-none text-black">Hapus</a></td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>dokter</td>
+                        <td>dokter@example.com</td>
+                        <td>dokter</td>
+                        <td><a href="" class="text-decoration-none text-black">Ubah</a> <span
+                                class="text-muted fw-light">|</span> <a href=""
+                                class="text-decoration-none text-black">Hapus</a></td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>admin</td>
+                        <td>admin@example.com</td>
+                        <td>admin</td>
+                        <td><a href="" class="text-decoration-none text-black">Ubah</a> <span
+                                class="text-muted fw-light">|</span> <a href=""
+                                class="text-decoration-none text-black">Hapus</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+</html>

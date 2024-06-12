@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/air-datepicker@3.5.3/air-datepicker.min.css">
+    <script src="js/bootstrap.bundle.js"></script>
+    <title>Document</title>
+</head>
+
+<body class="d-flex">
+    <aside class="sidebar">
+        <img src="img/Logo-secondary.svg" alt="" class="img-fluid mb-5">
+        <div class="sidebar-wrapper w-100 d-flex flex-column gap-2">
+            <a href="" class="sidebar-link w-100"><i class="fa-solid fa-gauge-high fs-4 me-3"></i>Dashboard</a>
+            <a href="" class="sidebar-link w-100"><i class="fa-solid fa-user-doctor fs-4 me-3"></i>Daftar
+                Dokter</a>
+            <a href="" class="sidebar-link w-100"><i
+                    class="fa-solid fa-users-between-lines fs-4 me-3"></i>Program dan
+                Kebijakan</a>
+            <a href="" class="sidebar-link w-100 active"><i class="fa-solid fa-house-laptop fs-4 me-3"></i>Acara Kesehatan</a>
+            <a href="" class="sidebar-link w-100"><i class="fa-solid fa-book-medical fs-4 me-3"></i>Artikel Pendidikan
+                Kesehatan</a>
+        </div>
+    </aside>
+    <main class="w-100">
+        <!-- START NAVBAR -->
+        <nav class="navbar navbar-expand-lg py-3">
+            <div class="container-fluid px-5">
+                <h2 class="navbar-brand">Tambah Acara Kesehatan</h2>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-3">
+                        <li class="nav-item">
+                            <a href="" class="btn btn-outline-secondary border-secondary">Admin 1</a>
+                        </li>
+                        <li class="nav-item">
+                            <img src="img/balita.png" class="rounded-circle img-fluid" width="40px" height="40px"
+                                alt="">
+                        </li>
+                        <li class="nav-item">
+                            <form action="" style="width: 40px; height: 40px;">
+                                <button type="submit" class="btn btn-secondary rounded-circle text-white w-100 h-100"><i
+                                        class="fa-solid fa-person-walking-dashed-line-arrow-right"></i></button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- END OF NAVBAR -->
+
+        <section class="content p-5">
+            <form action="" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-6">
+                        <img src="img/berita-1.png" class="img-fluid rounded-3" alt="" id="artikelPreview">
+                    </div>
+                    <div class="col-6">
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Judul</span>
+                            <input type="text" class="form-control" placeholder="Judul" aria-label="Dokumen STR"
+                                name="judul">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Foto Acara</span>
+                            <input type="file" class="form-control d-none" placeholder="Foto Acara"
+                                name="foto_acara" aria-describedby="basic-addon1"
+                                accept="image/png,image/jpg,image/jpeg" id="foto_acara">
+                            <label for="foto_acara" class="fs-6 border form-control cursor-pointer"
+                                id="fotoAcaraId">Pilih Berkas</label>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Pemateri</span>
+                            <input type="text" class="form-control" placeholder="Pemateri" name="pemateri">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Jam Mulai</span>
+                            <input type="time" name="jam_mulai" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Jam Selesai</span>
+                            <input type="time" name="jam_selesai" class="form-control">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Link Grup</span>
+                            <input type="text" class="form-control" placeholder="Link Grup..." name="link_grup">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Isi Konten</span>
+                            <input type="text" class="form-control" placeholder="Konten ... " name="isi_konten">
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Status</span>
+                            <select name="status" class="form-select" id="">
+                                <option value="">Pilih Status</option>
+                                <option value="">Dibuka</option>
+                                <option value="">Ditutup</option>
+                            </select>
+                        </div>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-gray-200" id="basic-addon1">Tanggal</span>
+                            <input type="text" class="form-control rounded-end-2" placeholder="Pilih Tanggal" name="isi_konten" id="tanggalArtikel" readonly>
+                            <i class="fa-regular fa-calendar-check end-0 text-gray-600 fs-5 input-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" class="btn btn-secondary text-white w-100 mt-4" value="Unggah Artikel" />
+            </form>
+
+            <table class="table table-bordered mt-5">
+                <thead class="">
+                    <th style="width: 50px;" class="bg-secondary-100">No</th>
+                    <th class="bg-secondary-100">Judul</th>
+                    <th class="bg-secondary-100">Foto Acara</th>
+                    <th class="bg-secondary-100">Pemateri</th>
+                    <th class="bg-secondary-100">Jam Mulai</th>
+                    <th class="bg-secondary-100">Jam Selesai</th>
+                    <th class="bg-secondary-100">Link Grup</th>
+                    <th class="bg-secondary-100">Isi Konten</th>
+                    <th class="bg-secondary-100">Status</th>
+                    <th class="bg-secondary-100">Tanggal</th>
+                    <th style="width: 150px;" class="bg-secondary-100">Aksi</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Perkembangan Motorik Balita Zaman Sekarang</td>
+                        <td><img src="img/berita-1.png" class="img-fluid" alt="" width="160px"></td>
+                        <td>Dr. Rina Mulyani, Sp.A</td>
+                        <td>10.00</td>
+                        <td>12.00</td>
+                        <td>https://www.google.com</td>
+                        <td>Acara ini akan mengupas tuntas mengenai berbagai aspek perkembangan motorik pada balita di era modern.</td>
+                        <td>Dibuka</td>
+                        <td>25-05-24</td>
+                        <td><a href="" class="text-decoration-none text-black">Ubah</a> <span
+                                class="text-muted fw-light">|</span> <a href=""
+                                class="text-decoration-none text-black">Hapus</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+
+<script type="module">
+    import indo from './js/indo.js'
+    const calendar = new AirDatepicker('#tanggalArtikel', {
+    locale: indo,
+    minDate: new Date(),
+    maxDate: new Date(new Date().setMonth(new Date().getMonth() + 3)).toLocaleDateString(),
+    autoClose: true,
+    dateFormat: "yyyy-MM-dd",
+});
+
+    const foto_acara = document.getElementById("foto_acara")
+    foto_acara.onchange = function () {
+        const label = document.getElementById("fotoAcaraId")
+        const fileName = this.files[0].name
+        label.innerText = fileName
+        const artikelPreview = document.getElementById('artikelPreview')
+        var src = URL.createObjectURL(this.files[0]);
+        artikelPreview.src = src
+    }
+</script>
+
+</html>

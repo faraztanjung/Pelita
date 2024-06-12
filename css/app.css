@@ -9,6 +9,7 @@
     --secondary-200: #E3D1C6;
     /* update_at: 22/05/24 00:02 */
     --secondary-300: #D0B2A0;
+    --secondary-600: #855A42;
     /* update_at: 22/05/24 00:02 */
     --success: #198754;
     --danger: #DC3545;
@@ -29,6 +30,7 @@
     --accent1: #A4D1E5;
     --accent2: #F8DDC4;
     --gray-200: #E9ECEF;
+    --gray-600: #6C757D;
 }
 
 
@@ -341,6 +343,11 @@ a.card {
 
 .bg-secondary-300 {
     background-color: var(--secondary-300) !important;
+    /* updated_at : 24/05/24 00.08 */
+}
+
+.bg-secondary-600 {
+    background-color: var(--secondary-600) !important;
     /* updated_at : 24/05/24 00.08 */
 }
 
@@ -664,4 +671,73 @@ a.card:hover {
 
 .kalkulator label:has([type=radio]:checked+img) {
     outline: 2px solid var(--primary);
+}
+
+aside.sidebar {
+    width: 300px;
+    min-height: 100vh;
+    background-color: var(--secondary-100);
+    padding: 40px 20px 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    /* position: relative; */
+}
+
+.text-secondary-600 {
+    color: var(--secondary-600);
+}
+
+.sidebar-link {
+    text-decoration: none;
+    color: var(--secondary-200);
+    font-weight: bold;
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-link i {
+    vertical-align: middle;
+}
+
+.sidebar-link.active {
+    color: var(--secondary-600) !important;
+}
+
+.sidebar-link:hover, .sidebar-link::before{
+    color: var(--secondary-600);
+    transition: all 0.35s ease-in-out;
+}
+
+.sidebar-link.active::before,
+.sidebar-link:hover::before {
+    opacity: 1;
+    content: "";
+    background-color: var(--secondary-600);
+    position: absolute;
+    width: 6px;
+    left: -20px;
+    top: 0;
+    border: 1px solid var(--secondary-600);
+    border-radius: 0px 20px 20px 0px;
+    height: 100%;
+    transition: border 0.35s ease-in-out;
+}
+
+.border-secondary-600{
+    border: 2px solid var(--secondary-600);
+}
+
+.text-gray-600 {
+    color: var(--gray-600) !important;
+}
+
+.input-icon {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+    transform: translate(-100%, -50%);
 }
